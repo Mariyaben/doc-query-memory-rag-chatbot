@@ -25,7 +25,7 @@ def extract_text_from_pdf(uploaded_file):
             text = "\n".join([page.get_text("text") for page in doc])
         return text
     except Exception as e:
-        st.error(f"❌ Error extracting text from PDF: {e}")
+        st.error(f"Error extracting text from PDF: {e}")
         return ""
 
 def store_embeddings(collection, data_dict, model_name="all-MiniLM-L6-v2", batch_size=100):
