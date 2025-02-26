@@ -12,9 +12,9 @@ load_dotenv()
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
 chroma_client = chromadb.PersistentClient(path="chroma_db")
-pdf_collection = chroma_client.get_or_create_collection("pdf_data")  # Stores PDF embeddings
-dataset_collection = chroma_client.get_or_create_collection("trained_data")  # Stores pre-trained dataset
-memory_collection = chroma_client.get_or_create_collection("chat_memory")  # Stores chat memory
+pdf_collection = chroma_client.get_or_create_collection("pdf_data")  
+dataset_collection = chroma_client.get_or_create_collection("trained_data")  
+memory_collection = chroma_client.get_or_create_collection("chat_memory")  
 
 ### PDF TEXT EXTRACTION & EMBEDDINGS
 
